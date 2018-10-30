@@ -117,6 +117,10 @@ blockquote:before{
 	padding-bottom:80px;
 }
 
+.parallax {
+	padding-bottom:110px;
+}
+
 .section-hr {
 	margin-top:80px;
 	margin-bottom:80px;
@@ -136,6 +140,7 @@ blockquote:before{
 	bottom:0;
 	background-position:center;
 	background-size:cover;
+	/* min-height: 500px; */
 }
 
 .bg-image.bg-parallax {
@@ -556,9 +561,9 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 }
 .middle {
 	position:absolute;
-	-webkit-transform: translate(-50% , -50%);
+	/* -webkit-transform: translate(-50% , -50%);
 	-ms-transform: translate(-50% , -50%);
-		transform: translate(-50% , -50);
+		transform: translate(-50% , -50); */
 	left:50%;
 	top:50%;
 	width:100%;
@@ -567,6 +572,11 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 	text-align:center;
 	opacity:0;
 	z-index:10;
+
+	-webkit-transform: translate(-50% , calc(-50% - 30px));
+	-ms-transform: translate(-50% , calc(-50% - 30px));
+		transform: translate(-50% , calc(-50% - 30px));
+
 	-webkit-transition:0.3s all;
 	transition:0.3s all;
 }
@@ -605,41 +615,30 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 	opacity:0.4;
 } 
 .course .course-img:hover .middle {
-	opacity:1;
-}
-/* .course .course-img:hover .middle .text {
-	opacity:1;
-} */
-
-.course .course-img .course-link-icon {
-	position:absolute;
-	-webkit-transform: translate(-50% , calc(-50% - 30px));
-	-ms-transform: translate(-50% , calc(-50% - 30px));
-		transform: translate(-50% , calc(-50% - 30px));
-	-webkit-transition:0.3s all;
-	transition:0.3s all;
-}
-
-.course .course-img:hover .course-link-icon {
 	-webkit-transform: translate(-50% , -50%);
-	    -ms-transform: translate(-50% , -50%);
-	        transform: translate(-50% , -50%);
-	opacity:0.9;
+	-ms-transform: translate(-50% , -50%);
+		transform: translate(-50% , -50%);
+	opacity:1;
 }
 
-#courses .center-btn {
+/* #courses .center-btn {
 	text-align:center;
 	margin-top:40px;
-}
+} */
 
 /*------------------------------------*\
 	Footer
 \*------------------------------------*/
 
+
+#footer {
+	position:relative;
+}
 #bottom-footer {
 	margin-top: 20px;
 	padding-top: 20px;
 	border-top: 1px solid #EBEBEB;
+	margin-bottom: 15px;
 }
 
 /* -- Footer Logo -- */
